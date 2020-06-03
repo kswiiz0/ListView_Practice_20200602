@@ -11,6 +11,9 @@ class ViewRoomDetailActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_room)
 
+        setupEvents()
+        setValues()
+
     }
 
     override fun setupEvents() {

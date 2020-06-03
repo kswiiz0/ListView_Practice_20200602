@@ -1,5 +1,6 @@
 package com.phis.listview_practice_20200602
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Toast
@@ -24,12 +25,16 @@ class MainActivity : BaseActivity() {
         listViewRooms.setOnItemClickListener { parent, view, position, id ->
 
             val clickedRoom = listRooms.get(position)
-            Toast.makeText(
-                mContext,
-                "${clickedRoom.getFormmatedAddressAndFloor()}(${clickedRoom.getFormmatedPrice()})을 선택하였습니다.",
-                Toast.LENGTH_SHORT
-            ).show()
+//            Toast.makeText(
+//                mContext,
+//                "${clickedRoom.getFormmatedAddressAndFloor()}(${clickedRoom.getFormmatedPrice()})을 선택하였습니다.",
+//                Toast.LENGTH_SHORT
+//            ).show()
 
+            val myIntent = Intent(mContext,ViewRoomDetailActivity::class.java)
+            myIntent.putExtra("room", clickedRoom)
+
+            startActivity(myIntent)
 
         }
     }
@@ -58,3 +63,5 @@ class MainActivity : BaseActivity() {
     }
 
 }
+
+

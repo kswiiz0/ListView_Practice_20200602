@@ -22,9 +22,9 @@ class RoomAdapter(context: Context, resId: Int, list: List<Room>) :
         var tempRow = convertView
 
         tempRow?.let{
-            //tempRow가 null일때 실행
-        }.let{
             //tempRow가 null 아닐때 실행
+        }.let{
+            //tempRow가 null일때 실행
             tempRow = inf.inflate(R.layout.list_room_item, null)
         }
         val row = tempRow!!

@@ -16,6 +16,7 @@ class Room(val price: Int, val address: String, val floor: Int, val memo: String
 
         if (floor < 0) {
             floorTxt = "지하${floor * -1}층"
+//            floorTxt = "지하${-floor}층"
         } else if (floor == 0) {
             floorTxt = "반지하"
         } else {
